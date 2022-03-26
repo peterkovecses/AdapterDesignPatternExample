@@ -26,7 +26,7 @@
         {
             public string Manufacturer { get; set; }
             public int Weight { get; set; }
-            public int Power { get; set; }
+            public double Power { get; set; }
 
             public Car(string name, int weight, int power)
             {
@@ -45,7 +45,7 @@
         public class Racecar
         {
             private int _weight;
-            private int _power;
+            private double _power;
 
             public string Manufacturer { get; set; }
             public int Weight
@@ -61,7 +61,7 @@
                 }
             }
 
-            public int Power
+            public double Power
             {
                 get
                 {
@@ -76,7 +76,7 @@
 
             public double WeightPowerRatio { get; private set; }
 
-            public Racecar(string name, int weight, int power)
+            public Racecar(string name, int weight, double power)
             {
                 Manufacturer = name;
                 Weight = weight;
@@ -100,7 +100,7 @@
 
         public static class ComputeService
         {
-            public static double ComputeWeightPowerRatio(int weight, int power)
+            public static double ComputeWeightPowerRatio(int weight, double power)
             {
                 if (power == 0)
                     return 0;
